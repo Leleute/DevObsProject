@@ -1,0 +1,4 @@
+{
+    "DBHost": "https://devops-todolist-project.firebaseio.com/",
+    "serviceAccount": "./firebase-key.json"
+}

@@ -1,0 +1,3 @@
+npm install --save firebase
+npm install --save-dev chai
+npm install --save-dev firebase-functions-test

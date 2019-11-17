@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My Todolist</title>
+    <style>
+        body {
+            font-family: Impact;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MY TODOLIST</h1>
+    <ul>
+        <%  todolist.forEach(function(childSnapshot) { %>
+        <li><a href="/todolist/delete/<%= childSnapshot.key %>">✘</a> <%=childSnapshot.val().name%></li>
+        <% });  %>
+    </ul>
+
+    <form action="/todolist/add/" method="post">
+        <p>
+             <input type="text" name="newtask" id="newtask" autofocus />
+            <button type="submit">Add</button>
+        </p>
+    </form>
+
+</body>
+
+</html>
