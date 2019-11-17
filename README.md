@@ -1,7 +1,7 @@
 # DevOps Project - TodoList with unit testing
 
 ## Introduction 
-Modules code - Bastien LE GUERN Matthieu LELEU
+TodoList project - Bastien LE GUERN Matthieu LELEU
 
 This project is meant to practice unit testing in application developped in NodeJS and ExpressJS
 The test have been conducted mostly with Mocha and Chai. 
@@ -45,7 +45,7 @@ Then, open your Internet browser and enter the following URL :
 $ http://localhost:8080/
 ```
 
-## Usage - Application
+## Usage - Testing
 Go to the project directory, and run the command : 
 
 ```sh
@@ -59,4 +59,5 @@ $ http://localhost:8080/
 
 ## Contributors
 Bastien LE GUERN
+
 Matthieu LELEU
