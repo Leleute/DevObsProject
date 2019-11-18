@@ -59,7 +59,6 @@ it('it should ADD a task ', (done) => {
     .post('/todolist/add')
     .send(add)
     .end((err, res) => {
-      console.log(res.body);
       res.body.should.a('string');
       res.body.should.equal('Added');
       done();
@@ -72,7 +71,6 @@ it('it should DELETE a task', (done) => {
   chai.request(server)
     .get('/todolist/delete/' + id)
     .end((err, res) => {
-      console.log(res.body);
       res.body.should.a('string');
       res.body.should.equal('Deleted');
       done();

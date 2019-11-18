@@ -10,7 +10,6 @@ function postTask(req, res) {
     var db = require('../server').firebase;
     var sType = typeof(require('../server').serverType);
 
-    console.log(req.body);
     if (req.body.newtask != '') {
         task = { name: req.body.newtask };
         db.push().set(task);
@@ -29,7 +28,6 @@ function deleteTask(req, res) {
     
     if (req.params.id != '') {
         db.child(req.params.id).remove()
-        console.log(req.params.id);
         if(sType !== 'undefined') {
             res.redirect('/todolist');
         } else {
