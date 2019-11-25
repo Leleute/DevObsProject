@@ -77,7 +77,7 @@ describe('Test of adding a new task in TodoList after connection', function() {
 
 describe('Test of deleting a task in TodoList after connection', function() {
     it('it should DELETE a task', (done) => {
-        let id = '-LuX8ixJziFR_uf-OYU1';
+        let id = '-LuXSsPMxGBcTm4p-RVw';
         chai.request(server)
             .get('/todolist/delete/' + id)
             .end((err, res) => {
