@@ -10,7 +10,11 @@ function postTask(req, res) {
     var db = require('../server').firebase;
     var sType = typeof(require('../server').serverType);
     if (req.body.newtask != '') {
-        task = { name: req.body.newtask, color: req.body.colorInput };
+        if (req.body.colorInput != undefined) {
+            task = { name: req.body.newtask, color: req.body.colorInput };
+        } else {
+            task = { name: req.body.newtask };
+        }
         db.push().set(task);
         if (sType !== 'undefined') {
             res.redirect('/todolist');
