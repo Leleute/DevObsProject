@@ -16,7 +16,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Leleute/DevOpsProject.git"
+        "url": "git+https://github.com/bastien5066/ece-devops-project.git"
     },
     "license": "ISC",
     "author": "Bastien LE GUERN Matthieu LELEU",
@@ -30,12 +30,6 @@
         "firebase-functions-test": "^0.1.7",
         "firebase-server": "^1.0.2",
         "jquery": "^3.4.1",
-        "mocha": "^6.2.2",
-        "mockery": "^2.1.0",
-        "mongoose": "^5.7.11",
-        "request": "^2.88.0",
-        "request-mockery": "^1.0.2",
-        "requestretry": "^4.0.2",
-        "supertest": "^4.0.2"
+        "mocha": "^6.2.2"
     }
 }

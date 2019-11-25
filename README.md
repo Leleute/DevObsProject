@@ -25,7 +25,7 @@ $ npm -v
 To copy this project on Desktop :
 
 ```sh
-$ git clone "https://github.com/Leleute/DevOpsProject.git"
+$ git clone "https://github.com/bastien5066/ece-devops-project.git"
 ```
 Go to the project directory and install the depedencies required for this project by running the command : 
 
