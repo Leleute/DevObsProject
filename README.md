@@ -3,7 +3,7 @@
 ## Introduction 
 TodoList project - Bastien LE GUERN Matthieu LELEU
 
-This project is meant to practice unit testing in application developped in NodeJS and ExpressJS
+This project is meant to practice unit testing in application developped in NodeJS, ExpressJS and jQuery.
 The test have been conducted mostly with Mocha and Chai. 
 
 
