@@ -4,35 +4,46 @@
 
 <head>
     <title>My Todolist</title>
-    <style>
-        body {
-            font-family: Impact;
-        }
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        li {
-            list-style-type: none;
-        }
-    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/todolist.css" />
 </head>
 
 <body>
-    <h1>MY TODOLIST</h1>
-    <ul>
-        <%  todolist.forEach(function(childSnapshot) { %>
-        <li><a href="/todolist/delete/<%= childSnapshot.key %>">✘</a> <%=childSnapshot.val().name%></li>
-        <% });  %>
-    </ul>
 
-    <form action="/todolist/add/" method="post">
-        <p>
-             <input type="text" name="newtask" id="newtask" autofocus />
-            <button type="submit">Add</button>
-        </p>
-    </form>
 
+    <div class='todolist-section'>
+        <div class="title">
+            What do you want to get done today ?
+        </div>
+
+        <ul>
+            <%  todolist.forEach(function(childSnapshot) { %>
+                <li>
+                    <a href="/todolist/delete/<%= childSnapshot.key %>"><img src="img/trash.png" width="25px"></a>
+                    <span style="color : <%= childSnapshot.val().color%>"><%=childSnapshot.val().name%></span>
+                </li>
+                <% });  %>
+        </ul>
+        <form action="/todolist/add/" method="post">
+            <div class="element">
+                <div class="color-palette">
+                    <input type="color" id="colorInput" name="colorInput" value="#e66465">
+                </div>
+                <input placeholder="Add your todo here" type="text" name="newtask" id="newtask" autofocus />
+                <button id="submit" type="submit"><img src="img/add.png" width="35px"></button>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#submit').click(function() {
+                var name = $.trim($('input#newtask').val());
+                if (name == "") {
+                    alert("Can't add a todo empty !");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
