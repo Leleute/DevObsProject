@@ -30,7 +30,7 @@
         "firebase-functions-test": "^0.1.7",
         "firebase-server": "^1.0.2",
         "jquery": "^3.4.1",
-        "mocha": "^6.2.2",
+        "mocha": "^10.2.0",
         "request": "^2.88.0",
         "requestretry": "^4.0.2"
     }
